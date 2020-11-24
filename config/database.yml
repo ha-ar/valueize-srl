@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  username: fahad
+  password: 11223344
+  pool: 15
+  timeout: 5000
+  host: localhost
+
+development:
+  <<: *default
+  database: rails-react-dev
+
+test:
+  <<: *default
+  database: rails-react-test
+
+production:
+  <<: *default
+  database: rails-react-production
